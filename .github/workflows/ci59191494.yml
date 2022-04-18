@@ -1,7 +1,8 @@
-name: c59191494
+name: ci59191494
 on:
-  schedule:
-  - cron: "15,45 * * * *"
+  push
+  # schedule:
+  # - cron: "*/10 * * * *"
 jobs:
   cypress-run:
     name: Cypress run
