@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Migrationsverket status</title>
+  <style>
+    body {
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <iframe
+    id="frame"
+    is="x-frame-bypass"
+    src="https://api.allorigins.win/get?url=https%3A%2F%2Fwww.migrationsverket.se%2FEnglish%2FContact-us%2FCheck-your-application-without-logging-in"
+    width="1920"
+    height="1080"
+    onload="handleOnLoad()"
+    sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+    ></iframe>
+  
+  <!-- <script type="module" src="https://unpkg.com/x-frame-bypass"></script> -->
+
+  <script>
+    // function handleOnLoad() {
+    //   const frame = document.getElementById("frame");
+    //   const contentDocument = frame.contentDocument;
+
+    //   console.log('contentDocument', contentDocument)
+
+    //   if (!contentDocument) return
+
+    //   const checkNumberRadio = contentDocument.querySelector("input[value='KONTROLLNR']");
+    //   const submitButton = contentDocument.querySelector("input[value='Search']");
+    //   const input = contentDocument.querySelector('input[pattern="[0-9]*"]');
+    //   // const event = new Event('change');
+
+    //   // console.log('input', input)
+
+    //   if (!checkNumberRadio) return
+
+
+    //   checkNumberRadio.click();
+
+      // setTimeout(() => {
+      //   input.value = "1234567";
+      //   input.dispatchEvent(event);
+      // })
+
+      // setTimeout(() => {
+      //   submitButton.click()
+      //   console.log('clicked')
+      // }, 2000)
+    // }
+  </script>
+
+  <script>
+    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://www.migrationsverket.se/English/Contact-us/Check-your-application-without-logging-in')}`)
+      .then(response => {
+        if (response.ok) return response.json()
+        throw new Error('Network response was not ok.')
+      })
+      .then(data => {
+        document.body
+      });
+  </script>
+</body>
+</html>
