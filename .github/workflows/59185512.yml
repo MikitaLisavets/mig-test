@@ -1,7 +1,7 @@
-name: Cypress tests 59185512
+name: c59185512
 on:
   schedule:
-  - cron: "*/30 * * * *"
+  - cron: "15,45 * * * *"
 jobs:
   cypress-run:
     name: Cypress run
