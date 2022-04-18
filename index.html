@@ -6,66 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Migrationsverket status</title>
   <style>
+    html {
+      height: 100%;
+      width: 100%;
+    }
     body {
       padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      background: #eaeaea;
+      font-size: 18px;
+    }
+
+    div {
+      display: flex;
+      width: 50%;
+      align-items: center;
+      justify-content: center;
+    }
+
+    div:first-child {
+      border-right: 2px solid #aeaeae;
+    }
+
+    span {
+      font-family: Arial, Helvetica, sans-serif;
+      display: inline-block;
+      margin-right: 10px;;
     }
   </style>
 </head>
 <body>
-  <iframe
-    id="frame"
-    is="x-frame-bypass"
-    src="https://api.allorigins.win/get?url=https%3A%2F%2Fwww.migrationsverket.se%2FEnglish%2FContact-us%2FCheck-your-application-without-logging-in"
-    width="1920"
-    height="1080"
-    onload="handleOnLoad()"
-    sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-    ></iframe>
-  
-  <!-- <script type="module" src="https://unpkg.com/x-frame-bypass"></script> -->
+  <div>
+    <span>Application 59185512:</span>
+    <img src="https://github.com/MikitaLisavets/mig-test/actions/workflows/59185512.yml/badge.svg">
+  </div>
 
-  <script>
-    // function handleOnLoad() {
-    //   const frame = document.getElementById("frame");
-    //   const contentDocument = frame.contentDocument;
-
-    //   console.log('contentDocument', contentDocument)
-
-    //   if (!contentDocument) return
-
-    //   const checkNumberRadio = contentDocument.querySelector("input[value='KONTROLLNR']");
-    //   const submitButton = contentDocument.querySelector("input[value='Search']");
-    //   const input = contentDocument.querySelector('input[pattern="[0-9]*"]');
-    //   // const event = new Event('change');
-
-    //   // console.log('input', input)
-
-    //   if (!checkNumberRadio) return
-
-
-    //   checkNumberRadio.click();
-
-      // setTimeout(() => {
-      //   input.value = "1234567";
-      //   input.dispatchEvent(event);
-      // })
-
-      // setTimeout(() => {
-      //   submitButton.click()
-      //   console.log('clicked')
-      // }, 2000)
-    // }
-  </script>
-
-  <script>
-    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://www.migrationsverket.se/English/Contact-us/Check-your-application-without-logging-in')}`)
-      .then(response => {
-        if (response.ok) return response.json()
-        throw new Error('Network response was not ok.')
-      })
-      .then(data => {
-        document.body
-      });
-  </script>
+  <div>
+    <span>Application 59191494:</span>
+    <img src="https://github.com/MikitaLisavets/mig-test/actions/workflows/59191494.yml/badge.svg">
+  </div>
 </body>
 </html>
