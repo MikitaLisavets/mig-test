@@ -14,4 +14,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          spec: cypress/integration/59191494.spec.js
+          spec: cypress/integration/test.spec.js
